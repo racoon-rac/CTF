@@ -78,7 +78,7 @@ Content-Security-Policy: script-src 'self' csp.example.com
 
 **JSONPエンドポイントの有無**
 
-*csp.example.com* からスクリプトを返させることによって SOP(Same-Origin-Policy) の制限をバイパスする手法。
+> *csp.example.com* からスクリプトを返させることによって SOP(Same-Origin-Policy) の制限をバイパスする手法。
 
 Attacker -> Target
 ```html
@@ -100,7 +100,7 @@ alert(1)//({name:aaaa})
 
 **サーバのライブラリ**
 
-ライブラリに含まれる Script Gadget と呼ばれるスクリプトの挿入を可能にするスクリプトを利用する。
+> ライブラリに含まれる Script Gadget と呼ばれるスクリプトの挿入を可能にするスクリプトを利用する。
 
 Angular.js の場合
 ```html
@@ -132,6 +132,9 @@ http://attacker.example.com/test.js と参照先を変えることが可能
 
 ### DOM Clobbering による strict-dynamic のバイパス
 ---
-> **script-src** ディレクティブにstrict-dynamic が設定されている場合、DOM Clobbering と呼ばれる手法を用いて CSP をバイパスできる場合がある。
+> script-src ディレクティブに strict-dynamic が設定されている場合、DOM Clobbering と呼ばれる手法を用いて CSP をバイパスできる場合がある。
+> > DOM Clobbering とは、HTML 内に不正な HTML を挿入することで本来の DOM 構造を破壊し、JavaScrip による DOM 操作の内容を強制的に変更させる手法のこと。
 
->DOM Clobbering とは、HTML 内に不正な HTML を挿入することで本来の DOM 構造を破壊し、JavaScrip による DOM 操作の内容を強制的に変更させる手法のこと。
+**strict-dynamic** : parser-incerted (\<img src="/"  onerror="\<script\>alert(1)\</script>"\>) を防ぐ設定
+
+
