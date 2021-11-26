@@ -10,5 +10,27 @@ CSPはXSSなどの*Content Injection攻撃*に対するリスクを軽減させ�
 - ハッシュ値
 	- 実効するスクリプトのハッシュ値を先に計算しておき、そのハッシュ値と同じ場合のみ実行を許可する。ハッシュ値衝突の危険性はある。
 - 乱数
-	- HTMLをレスポンス時に使い捨ての乱数すくりぷとを付与し、
+	- HTMLをレスポンス時に使い捨ての乱数スクリプトに付与し、付与時の乱数と等しい場合のみ実行する。
 
+## 見分け方
+
+CSPが設定されているかは以下の2パターンで確認できる。
+
+**ヘッダに含まれる場合**
+```http
+HTTP/1.1 200 OK
+Host: example.com
+...
+Content-Security-Policy: script-src 'self'
+...
+```
+
+**meta要素で記述する場合**
+```html
+<head>
+	<meta 
+		http-equiv="Content-Security-Policy" 
+		content="script-src 'self'"
+	>
+</head>
+```
