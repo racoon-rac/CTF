@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "XSS/CSP Evaluator.md",
+            "file": "XSS/CSP Evaluator.md.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "XSS/CSP Evaluator.md",
+            "file": "XSS/CSP Evaluator.md.md",
             "mode": "preview"
           }
         },
@@ -81,7 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "XSS/CSP Evaluator.md",
+                "file": "XSS/CSP Evaluator.md.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -101,7 +101,7 @@
   },
   "active": "bdaabc86ffd70d45",
   "lastOpenFiles": [
-    "XSS/CSP Evaluator.md",
+    "XSS/CSP Evaluator.md.md",
     "README.md.md",
     "README.md"
   ]
