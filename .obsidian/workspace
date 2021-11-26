@@ -1,0 +1,107 @@
+{
+  "main": {
+    "id": "fcb406349431b7ca",
+    "type": "split",
+    "children": [
+      {
+        "id": "bdaabc86ffd70d45",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "XSS/CSP Evaluator.md",
+            "mode": "source"
+          }
+        },
+        "group": "b9275cb86ac5cf44"
+      },
+      {
+        "id": "9dbebd8e531383c5",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "XSS/CSP Evaluator.md",
+            "mode": "preview"
+          }
+        },
+        "group": "b9275cb86ac5cf44"
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "00dc492b8dad084b",
+    "type": "split",
+    "children": [
+      {
+        "id": "8bead2e503b89715",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "01d2bf1ba884a109",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "8e06e24af5775df1",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "463a06c6ea8a4092",
+    "type": "split",
+    "children": [
+      {
+        "id": "9b6852718f972bd8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9e64c1c1bed19f8d",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "XSS/CSP Evaluator.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "9dbebd8e531383c5",
+  "lastOpenFiles": [
+    "XSS/CSP Evaluator.md",
+    "README.md"
+  ]
+}
