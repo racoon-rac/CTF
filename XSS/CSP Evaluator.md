@@ -14,7 +14,7 @@ CSPはXSSなどの*Content Injection攻撃*に対するリスクを軽減させ�
 - 乱数
 	- HTMLをレスポンス時に使い捨ての乱数スクリプトに付与し、付与時の乱数と等しい場合のみ実行する。
 
-## 見分け方
+## CSPが設定されているか
 
 CSPが設定されているかは以下の2パターンで確認できる。
 
@@ -69,6 +69,7 @@ script-src 'self' 'unsafe-inline'
 ## Bypassing
 
 ### ホストベースの構成
+---
 ```http
 Content-Security-Policy: script-src 'self' csp.example.com
 ```
@@ -114,7 +115,12 @@ Vue.js の場合
 ```
 
 
+
 ### ディレクティブの設定不備により脆弱性が生まれるパターン
+---
+
+> 設定の不備については
+[CSP Evaluator](https://csp-evaluator.withgoogle.com/)にて脆弱性を確認できる。
 
 **base-uri** 設定不備の際
 ```html
@@ -123,5 +129,9 @@ Vue.js の場合
 とすることでそれ以下の\<script src="/test.js"\>となっている箇所を
 http://attacker.example.com/test.js と参照先を変えることが可能
 
-設定の不備については
-[CSP Evaluator](https://csp-evaluator.withgoogle.com/)にて脆弱性を確認できる。
+
+### DOM Clobbering による strict-dynamic のバイパス
+---
+> **script-src** ディレクティブにstrict-dynamic が設定されている場合、DOM Clobbering と呼ばれる手法を用いて CSP をバイパスできる場合がある。
+
+>DOM Clobbering とは、HTML 内に不正な HTML を挿入することで本来の DOM 構造を破壊し、JavaScrip による DOM 操作の内容を強制的に変更させる手法のこと。
