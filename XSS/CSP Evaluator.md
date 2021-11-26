@@ -16,7 +16,7 @@ CSPはXSSなどの*Content Injection攻撃*に対するリスクを軽減させ�
 
 CSPが設定されているかは以下の2パターンで確認できる。
 
-**ヘッダに含まれる場合**
+**HTTPヘッダに含まれる場合**
 ```http
 HTTP/1.1 200 OK
 Host: example.com
@@ -34,3 +34,15 @@ Content-Security-Policy: script-src 'self'
 	>
 </head>
 ```
+
+## Bypassing
+
+### ディレクティブ
+ディレクティブとは、CSPによる制限を定義するための命令記法のこと。
+*\<directive-name\> \<directive-value\>* の順で書かれる
+For exsample)
+```directive
+script-src 'self'
+
+```
+
