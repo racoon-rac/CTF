@@ -35,14 +35,25 @@ Content-Security-Policy: script-src 'self'
 </head>
 ```
 
-## Bypassing
 
-### ディレクティブ
+## ディレクティブ
 ディレクティブとは、CSPによる制限を定義するための命令記法のこと。
-*\<directive-name\> \<directive-value\>* の順で書かれる
+*\<directive-name\> \<directive-value\> ...* の順で書かれる
 For exsample)
 ```directive
 script-src 'self'
-
+script-src 'self' 'unsafe-inline'
 ```
 
+**default-src** : Fetch Directives に属するディレクティブのフォールバックとして機能する。
+[]https://developer.mozilla.org/ja/docs/Web/HTTP/Headers/Content-Security-Policy/default-src
+
+**base-uri** : base要素で可能なドキュメントのそうたいURLの起点を制限するディレクティブ。**none** なら安全
+
+## Bypassing
+
+### 
+
+### ディレクティブの設定不備により脆弱性が生まれるパターン
+
+**base-uri** : base要素で可能なドキュメントのそうたいURLの起点を制限するディレクティブ。
