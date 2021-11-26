@@ -45,8 +45,22 @@ script-src 'self'
 script-src 'self' 'unsafe-inline'
 ```
 
+
+**script-srs** : スクリプトに関する制限を定義するディレクティブ。
+
+|keyword|説明|
+|---|---|
+|'none'|あらゆるスクリプト|
+|'self'|参照している HTML と Same-Origin であるスクリプトの実行を許可する|
+|host-source: |ホスト名や IP アドレス、URLによって指定されたサーバーから配信されるスクリプトの実行を許可する。|
+|'host-souce' 'nonce-<base64-value\>'
+
+
+
+**connect-src** : script interfaces API (XMLHttpRequest や Fetch API のこと) を介して通信可能なURLの制限を定義するディレクティブ。connect-src ディレクティブの値として指定されたURL以外のアクセスは禁止される。
+
 **default-src** : Fetch Directives に属するディレクティブのフォールバックとして機能する。
-[]https://developer.mozilla.org/ja/docs/Web/HTTP/Headers/Content-Security-Policy/default-src
+[developer.mozilla.org CSP: default-src](https://developer.mozilla.org/ja/docs/Web/HTTP/Headers/Content-Security-Policy/default-src)
 
 **base-uri** : base要素で可能なドキュメントのそうたいURLの起点を制限するディレクティブ。**none** なら安全
 
