@@ -144,7 +144,12 @@ http://attacker.example.com/test.js と参照先を変えることが可能
 *document.getElementById('name')* などが存在するときは、
 もともとの idの値よりも前の段階で そのidの値 を使用することで DOM 構造を破壊できる。
 
-攻撃例)
+
+
+
+脆弱性)
+
+?title=TITLE&name=USER
 ```html
 <script>
 	windows.onload = () {
@@ -152,9 +157,19 @@ http://attacker.example.com/test.js と参照先を変えることが可能
 		document.getElemetById('name').intterHTML = name;
 	}
 </script>
+
+<!-- タイトル
+?title=TITLE から取得
+-->
+<h1>TITLE</h1>
+<!-- 名前 -->
 <p id="name"></p>
 ```
 
+
+攻撃例)
+
+?title=\</h1\>\<script id="name"\>\</script\>\<h1\>&name=alert(1)//
 ```html
 <script>
 	windows.onload = () {
@@ -162,5 +177,11 @@ http://attacker.example.com/test.js と参照先を変えることが可能
 		document.getElemetById('name').intterHTML = name;
 	}
 </script>
+
+<!-- タイトル
+?title=</h1><script id="name"></script><h1> から取得
+-->
+<h1></h1><script id="name"></script><h1>
+<!-- 名前 -->
 <p id="name"></p>
 ```
