@@ -133,8 +133,24 @@ http://attacker.example.com/test.js と参照先を変えることが可能
 ### DOM Clobbering による strict-dynamic のバイパス
 ---
 > script-src ディレクティブに strict-dynamic が設定されている場合、DOM Clobbering と呼ばれる手法を用いて CSP をバイパスできる場合がある。
-> > DOM Clobbering とは、HTML 内に不正な HTML を挿入することで本来の DOM 構造を破壊し、JavaScrip による DOM 操作の内容を強制的に変更させる手法のこと。
+> > **strict-dynamic** : parser-incerted (\<img src="/"  onerror="\<script\>alert(1)\</script>"\>) などを防ぐ設定
+> > 
+> > **DOM Clobbering** とは、HTML 内に不正な HTML を挿入することで本来の DOM 構造を破壊し、JavaScrip による DOM 操作の内容を強制的に変更させる手法のこと。
 
-**strict-dynamic** : parser-incerted (\<img src="/"  onerror="\<script\>alert(1)\</script>"\>) を防ぐ設定
+**DOM Clobbering**
 
+*document.getElementById('name')* などが存在するときは、
+もともとの idの値よりも前の段階で そのidの値 を使用することで DOM 構造を破壊できる。
+例)
+```html
+<script>
+window.onload = () {
+	console.log(document.getElementById('x').innerHTML);
+	// Output "Evil"
+}
+</script>
+
+<script id="x">Evil</script>
+<p id="x">blah</p>
+```
 
