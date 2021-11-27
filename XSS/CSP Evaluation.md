@@ -1,4 +1,5 @@
-# CSP Evaluator
+# CSP Evaluation
+<br>
 
 ## CSPとは
 CSP(Content Security Policy)
@@ -15,6 +16,8 @@ CSPはXSSなどの*Content Injection攻撃*に対するリスクを軽減させ�
 - 乱数
 	- HTMLをレスポンス時に使い捨ての乱数スクリプトに付与し、付与時の乱数と等しい場合のみ実行する。
 	- nonce 属性がついていない script 要素は実行しない
+
+<br>
 
 ## CSPが設定されているか
 
@@ -38,6 +41,8 @@ Content-Security-Policy: script-src 'self'
 	>
 </head>
 ```
+
+<br>
 
 
 ## ディレクティブ
@@ -67,6 +72,8 @@ script-src 'self' 'unsafe-inline'
 **base-uri** : base要素で可能なドキュメントの相対URLの起点を制限するディレクティブ。**none** なら安全
 
 -->
+
+<br>
 
 ## Bypassing
 
@@ -117,6 +124,8 @@ Vue.js の場合
 ```
 
 
+<br>
+
 
 ### ディレクティブの設定不備により脆弱性が生まれるパターン
 ---
@@ -131,6 +140,7 @@ Vue.js の場合
 とすることでそれ以下の\<script src="/test.js"\>となっている箇所を
 http://attacker.example.com/test.js と参照先を変えることが可能
 
+<br>
 
 ### DOM Clobbering による strict-dynamic のバイパス
 ---

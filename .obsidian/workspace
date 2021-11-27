@@ -4,28 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "bdaabc86ffd70d45",
+        "id": "2deb9eac6c4c395a",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "XSS/CSP Evaluator.md",
+            "file": "XSS/CSP Evaluation.md",
             "mode": "source"
           }
         },
-        "group": "b9275cb86ac5cf44"
+        "group": "8f77f9e7faaff73e"
       },
       {
-        "id": "9dbebd8e531383c5",
+        "id": "ee39e26cb0d493c1",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "XSS/CSP Evaluator.md",
+            "file": "XSS/CSP Evaluation.md",
             "mode": "preview"
           }
         },
-        "group": "b9275cb86ac5cf44"
+        "group": "8f77f9e7faaff73e"
       }
     ],
     "direction": "vertical"
@@ -81,7 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "XSS/CSP Evaluator.md",
+                "file": "XSS/CSP Evaluation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -91,17 +91,25 @@
                 "unlinkedCollapsed": true
               }
             }
+          },
+          {
+            "id": "1ff5db6c2f330d0b",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
-  "active": "bdaabc86ffd70d45",
+  "active": "2deb9eac6c4c395a",
   "lastOpenFiles": [
-    "XSS/CSP Evaluator.md",
+    "XSS/CSP Evaluation.md",
     "README.md"
   ]
 }
