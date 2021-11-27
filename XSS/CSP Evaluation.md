@@ -159,7 +159,7 @@ http://attacker.example.com/test.js と参照先を変えることが可能
 
 脆弱性)
 
-?title=TITLE&name=USER
+*?title=TITLE&name=USER*
 ```html
 <script>
 	windows.onload = () {
@@ -179,7 +179,7 @@ http://attacker.example.com/test.js と参照先を変えることが可能
 
 攻撃例)
 
-?title=\</h1\>\<script id="name"\>\</script\>\<h1\>&name=alert(1)//
+*?title=\</h1\>\<script id="name"\>\</script\>\<h1\>&name=alert(1)//*
 ```html
 <script>
 	windows.onload = () {
