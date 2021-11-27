@@ -2,7 +2,8 @@
 
 - [\# CSS Injection とは](#CSS-Injection-とは)
 - [\# Attribute Selector について](#Attribute-Selector-について)
-- 
+- [\# CSS での HTTP Request について](#CSS-での-HTTP-Request-について)
+- [\# Injection](#Injection)
 
 
 ## CSS Injection とは
@@ -32,3 +33,10 @@ body {
 
 
 ## Injection
+
+Attribute Selector と URL 関数を利用することで、ユーザの入力した値を取得することができる。
+簡潔に言うと、総当りする。
+
+```css
+input[value=]
+```
