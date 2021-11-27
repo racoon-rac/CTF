@@ -1,7 +1,15 @@
 # CSP Evaluation
 <br>
 
-[CSPとは](#CSPとは)
+- [#CSPとは](#CSPとは)
+- [#CSPが設定されているか](#CSPが設定されているか)
+	- [#HTTPヘッダに含まれる場合](#HTTPヘッダに含まれる場合)
+	- [#meta要素で記述する場合](#meta要素で記述する場合)
+- [#ディレクティブ](#ディレクティブ)
+- [#CSPとは](#CSPとは)
+- [#Bypassing](#Bypassing)
+	- [#ホストベースの構成を利用したバイパス](#ホストベースの構成を利用したバイパス)
+	- [#ディレクティブの設定不備により脆弱性が生まれるパターン](#ディレクティブの設定不備により脆弱性が生まれるパターン)
 
 <br>
 
@@ -27,7 +35,7 @@ CSPはXSSなどの*Content Injection攻撃*に対するリスクを軽減させ�
 
 CSPが設定されているかは以下の2パターンで確認できる。
 
-**HTTPヘッダに含まれる場合**
+### HTTPヘッダに含まれる場合
 ```http
 HTTP/1.1 200 OK
 Host: example.com
@@ -36,7 +44,7 @@ Content-Security-Policy: script-src 'self'
 ...
 ```
 
-**meta要素で記述する場合**
+### meta要素で記述する場合
 ```html
 <head>
 	<meta 
@@ -81,7 +89,7 @@ script-src 'self' 'unsafe-inline'
 
 ## Bypassing
 
-### ホストベースの構成
+### ホストベースの構成を利用したバイパス
 ---
 ```http
 Content-Security-Policy: script-src 'self' csp.example.com
