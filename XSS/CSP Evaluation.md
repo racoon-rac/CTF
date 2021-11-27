@@ -87,7 +87,7 @@ Content-Security-Policy: script-src 'self' csp.example.com
 
 **JSONPエンドポイントの有無**
 
-> *csp.example.com* からスクリプトを返させることによって SOP(Same-Origin-Policy) の制限をバイパスする手法。
+> *csp.example.com* からスクリプトを返させることによって SOP(Same-Origin-Policy) の制限をバイパスする。
 
 Attacker -> Target
 ```html
