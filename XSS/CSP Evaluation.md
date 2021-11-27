@@ -10,7 +10,7 @@
 - [\#Bypassing](#Bypassing)
 	- [\#ホストベースの構成を利用したバイパス](#ホストベースの構成を利用したバイパス)
 	- [\#ディレクティブの設定不備により脆弱性が生まれるパターン](#ディレクティブの設定不備により脆弱性が生まれるパターン)
-	- [\#DOM Clobbering による strict-dynamic のバイパス](#DOM-Clobbering-による-strict-dynamic-のバイパス)
+	- [\#DOM Clobbering による strict-dynamic のバイパス](#DOM\ Clobbering\ による\ strict-dynamic\ のバイパス)
 
 <br>
 
@@ -156,6 +156,7 @@ http://attacker.example.com/test.js と参照先を変えることが可能
 <br>
 
 ### DOM Clobbering による strict-dynamic のバイパス
+
 ---
 > script-src ディレクティブに strict-dynamic が設定されている場合、DOM Clobbering と呼ばれる手法を用いて CSP をバイパスできる場合がある。
 > > **strict-dynamic** : parser-incerted (\<img src="/"  onerror="\<script\>alert(1)\</script>"\>) などを防ぐ設定

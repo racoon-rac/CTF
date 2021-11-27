@@ -52,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#DOM-Clobbering-による-strict-dynamic-のバイパス",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -61,7 +61,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -107,7 +108,7 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "2deb9eac6c4c395a",
+  "active": "ee39e26cb0d493c1",
   "lastOpenFiles": [
     "XSS/CSP Evaluation.md",
     "README.md"
