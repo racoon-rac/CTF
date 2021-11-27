@@ -10,7 +10,7 @@ HTML に対して CSS を挿入することで Web ページ上の機密情報�
 
 ## Attribute Selector について
 
-CSS には <span style="color: red>Attribute Selector </span>
+CSS には <span style="color: red; ">Attribute Selector</span>
 
 
 
