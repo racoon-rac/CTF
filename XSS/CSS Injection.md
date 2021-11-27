@@ -8,7 +8,7 @@
 
 ## CSS Injection とは
 
-HTML に対して CSS を挿入することで Web ページ上の機密情報の取得を狙う攻撃のこと。
+HTML に対して CSS を挿入することで Web ページ上の機密情報の取得を狙う攻撃のこと。XSSとは異なる分類。
 
 ## Attribute Selector について
 
@@ -38,5 +38,5 @@ Attribute Selector と URL 関数を利用することで、ユーザの入力�
 簡潔に言うと、総当りする。
 
 ```css
-input[value=]
+input[value^=]
 ```
