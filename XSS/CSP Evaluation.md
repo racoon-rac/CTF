@@ -10,7 +10,7 @@
 - [\#Bypassing](#Bypassing)
 	- [\#ホストベースの構成を利用したバイパス](#ホストベースの構成を利用したバイパス)
 	- [\#ディレクティブの設定不備により脆弱性が生まれるパターン](#ディレクティブの設定不備により脆弱性が生まれるパターン)
-	- [\#DOM Clobbering による strict-dynamic のバイパス](#DOM%20Clobbering%20による%20strict-dynamic%20のバイパス)
+	- [\#DOM Clobbering による strict-dynamic のバイパス](#DOM-Clobbering-による-strict-dynamic-のバイパス)
 
 <br>
 
