@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "XSS/CSP Evaluation.md",
+            "file": "XSS/CSS Injection.md",
             "mode": "source"
           }
         },
@@ -21,8 +21,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "XSS/CSP Evaluation.md",
-            "mode": "preview"
+            "file": "XSS/CSS Injection.md",
+            "mode": "source"
           }
         },
         "group": "8f77f9e7faaff73e"
@@ -52,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#DOM-Clobbering-による-strict-dynamic-のバイパス",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -61,8 +61,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -82,7 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "XSS/CSP Evaluation.md",
+                "file": "XSS/CSS Injection.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +109,9 @@
   },
   "active": "2deb9eac6c4c395a",
   "lastOpenFiles": [
+    "XSS/CSS Injection.md",
     "XSS/CSP Evaluation.md",
-    "README.md"
+    "README.md",
+    "CSS Injection/Untitled.md"
   ]
 }

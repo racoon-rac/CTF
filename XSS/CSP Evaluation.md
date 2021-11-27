@@ -88,7 +88,7 @@ script-src 'self' 'unsafe-inline'
 
 <br>
 
-## Bypassing
+# Bypassing
 
 ### ホストベースの構成を利用したバイパス
 ---
@@ -162,12 +162,12 @@ http://attacker.example.com/test.js と参照先を変えることが可能
 > > 
 > > **DOM Clobbering** とは、HTML 内に不正な HTML を挿入することで本来の DOM 構造を破壊し、JavaScrip による DOM 操作の内容を強制的に変更させる手法のこと。
 
+> idの値を事前にHTMLとして使用できそうかを確認。
+
 **DOM Clobbering**
 
 *document.getElementById('name')* などが存在するときは、
 もともとの idの値よりも前の段階で そのidの値 を使用することで DOM 構造を破壊できる。
-
-
 
 
 脆弱性)
